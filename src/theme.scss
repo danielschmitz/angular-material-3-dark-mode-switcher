@@ -39,7 +39,7 @@ $d-theme: mat.define-theme((
 
 html {
   // .app-light-theme (default)
-  @include app-theme($d-theme, "light");
+  @include app-theme($l-theme, "light");
 
   .app-dark-theme {
     @include app-theme($d-theme, "dark");
