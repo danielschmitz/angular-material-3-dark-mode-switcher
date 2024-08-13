@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+
+$light-theme: mat.define-theme((
+  color: (
+    theme-type: light,
+    primary: mat.$magenta-palette, // azure, rose, cyan, magenta
+  )
+));
+
+$dark-theme: mat.define-theme((
+  color: (
+    theme-type: dark,
+    primary: mat.$magenta-palette, // azure, rose, cyan, magenta
+  )
+));
+
+html {
+  .dark-theme {
+    @include mat.all-component-themes($dark-theme);
+    .app-toolbar {
+      background-color: mat.get-theme-color($dark-theme, on-primary);
+    }
+  }
+  
+  .light-theme {
+    @include mat.all-component-themes($light-theme);
+    .app-toolbar {
+      background-color: mat.get-theme-color($light-theme, on-primary);
+    }
+  }
+  .main {
+    padding: 20px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
