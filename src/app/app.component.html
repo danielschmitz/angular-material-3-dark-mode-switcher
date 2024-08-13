@@ -15,8 +15,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      @if (isHandset$ | async) {
+    <mat-toolbar class="app-toolbar">
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -25,9 +24,15 @@
       >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      }
       <span>angular-firebase-login</span>
+      <span class="spacer"></span>
+      <mat-slide-toggle
+        (change)="onThemeChanged()"
+        [checked]="isDarkMode"
+      ></mat-slide-toggle>
     </mat-toolbar>
-    <router-outlet />
+    <div class="main">
+      <router-outlet />
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
