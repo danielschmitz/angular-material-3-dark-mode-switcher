@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-firebase-login": {
+    "angular-theme-switcher": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-firebase-login",
+            "outputPath": "dist/angular-theme-switcher",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -55,10 +55,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-firebase-login:build:production"
+              "buildTarget": "angular-theme-switcher:build:production"
             },
             "development": {
-              "buildTarget": "angular-firebase-login:build:development"
+              "buildTarget": "angular-theme-switcher:build:development"
             }
           },
           "defaultConfiguration": "development"
